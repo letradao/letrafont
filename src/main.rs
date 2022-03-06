@@ -12,7 +12,7 @@ fn main() {
     let state = get_initial_state();
 
     let main_window = WindowDesc::new(make_ui())
-        .title(LocalizedString::new("Spoonbender"))
+        .title(LocalizedString::new("LetraFont"))
         //.menu(menus::make_menu)
         .window_size(Size::new(900.0, 800.0));
 
