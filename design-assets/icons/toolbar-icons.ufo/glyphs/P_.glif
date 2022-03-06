@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="P" format="2">
+	<unicode hex="0050"/>
+	<advance width="220"/>
+	<outline>
+		<contour>
+			<point x="0" y="0" type="line"/>
+			<point x="220" y="0" type="line"/>
+			<point x="220" y="500" type="line"/>
+			<point x="0" y="500" type="line"/>
+		</contour>
+	</outline>
+</glyph>

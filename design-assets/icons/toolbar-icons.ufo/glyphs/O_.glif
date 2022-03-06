@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="O" format="2">
+	<unicode hex="004F"/>
+	<advance width="330"/>
+	<outline>
+		<contour>
+			<point x="0" y="0" type="line"/>
+			<point x="140" y="0" type="line"/>
+			<point x="140" y="500" type="line"/>
+			<point x="0" y="500" type="line"/>
+		</contour>
+		<contour>
+			<point x="190" y="500" type="move"/>
+			<point x="330" y="500" type="line"/>
+		</contour>
+		<contour>
+			<point x="190" y="0" type="move"/>
+			<point x="330" y="0" type="line"/>
+		</contour>
+		<contour>
+			<point x="210" y="400" type="line"/>
+			<point x="310" y="400" type="line"/>
+			<point x="260" y="490" type="line"/>
+		</contour>
+		<contour>
+			<point x="210" y="100" type="line"/>
+			<point x="310" y="100" type="line"/>
+			<point x="260" y="10" type="line"/>
+		</contour>
+		<contour>
+			<point x="260" y="400" type="move"/>
+			<point x="260" y="100" type="line"/>
+		</contour>
+		<contour>
+			<point x="70" y="150" type="move"/>
+			<point x="140" y="150" type="line"/>
+		</contour>
+		<contour>
+			<point x="100" y="100" type="move"/>
+			<point x="140" y="100" type="line"/>
+		</contour>
+		<contour>
+			<point x="50" y="50" type="move"/>
+			<point x="140" y="50" type="line"/>
+		</contour>
+		<contour>
+			<point x="100" y="200" type="move"/>
+			<point x="140" y="200" type="line"/>
+		</contour>
+		<contour>
+			<point x="50" y="250" type="move"/>
+			<point x="140" y="250" type="line"/>
+		</contour>
+		<contour>
+			<point x="70" y="350" type="move"/>
+			<point x="140" y="350" type="line"/>
+		</contour>
+		<contour>
+			<point x="100" y="300" type="move"/>
+			<point x="140" y="300" type="line"/>
+		</contour>
+		<contour>
+			<point x="100" y="400" type="move"/>
+			<point x="140" y="400" type="line"/>
+		</contour>
+		<contour>
+			<point x="50" y="450" type="move"/>
+			<point x="140" y="450" type="line"/>
+		</contour>
+	</outline>
+</glyph>
