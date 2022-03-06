@@ -272,16 +272,19 @@ fn constrain_path(mut path: BezPath) -> BezPath {
 }
 
 fn select_path() -> BezPath {
-let mut bez = BezPath::new();
+    let mut bez = BezPath::new();
 
-    bez.move_to((137.0, 438.0));
-    bez.line_to((79.0, 295.0));
-    bez.line_to((0.0, 368.0));
-    bez.line_to((0.0, 0.0));
-    bez.line_to((249.0, 259.0));
-    bez.line_to((141.0, 268.0));
-    bez.line_to((207.0, 405.0));
-    bez.line_to((137.0, 438.0));
+    bez.move_to((110.0, 500.0));
+    bez.line_to((110.0, 380.0));
+    bez.line_to((2.0, 410.0));
+    bez.line_to((0.0, 410.0));
+    bez.line_to((159.0, 0.0));
+    bez.line_to((161.0, 0.0));
+    bez.line_to((320.0, 410.0));
+    bez.line_to((318.0, 410.0));
+    bez.line_to((210.0, 380.0));
+    bez.line_to((210.0, 500.0));
+    bez.line_to((110.0, 500.0));
     bez.close_path();
     bez
 }
