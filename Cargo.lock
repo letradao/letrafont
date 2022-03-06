@@ -3,6 +3,23 @@
 version = 3
 
 [[package]]
+name = "LetraFont"
+version = "0.2.0"
+dependencies = [
+ "chrono",
+ "druid",
+ "druid-theme-loader",
+ "log",
+ "lopdf",
+ "norad",
+ "plist",
+ "runebender-lib",
+ "serde",
+ "serde_derive",
+ "svg",
+]
+
+[[package]]
 name = "adler"
 version = "1.0.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1674,23 +1691,6 @@ dependencies = [
  "proc-macro2",
  "quote",
  "syn",
-]
-
-[[package]]
-name = "runebender"
-version = "0.2.0"
-dependencies = [
- "chrono",
- "druid",
- "druid-theme-loader",
- "log",
- "lopdf",
- "norad",
- "plist",
- "runebender-lib",
- "serde",
- "serde_derive",
- "svg",
 ]
 
 [[package]]

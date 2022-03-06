@@ -1,5 +1,5 @@
 [package]
-name = "runebender"
+name = "LetraFont"
 version = "0.2.0"
 authors = ["Raph Levien <raph.levien@gmail.com>", "Colin Rofls <colin.rofls@gmail.com>"]
 license = "Apache-2.0"
