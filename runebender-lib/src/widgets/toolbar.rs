@@ -11,11 +11,11 @@ use crate::tools::ToolId;
 const TOOLBAR_ITEM_SIZE: Size = Size::new(48.0, 48.0);
 const TOOLBAR_ITEM_PADDING: f64 = 2.0;
 const TOOLBAR_ICON_PADDING: f64 = 8.0;
-const TOOLBAR_BORDER_STROKE_WIDTH: f64 = 2.0;
-const TOOLBAR_ITEM_STROKE_WIDTH: f64 = 1.5;
+const TOOLBAR_BORDER_STROKE_WIDTH: f64 = 1.0;
+const TOOLBAR_ITEM_STROKE_WIDTH: f64 = 1.0;
 // TODO: move these to theme
 const TOOLBAR_BG_DEFAULT: Color = Color::grey8(0x00);
-const TOOLBAR_BG_SELECTED: Color = Color::grey8(0x22);
+const TOOLBAR_BG_SELECTED: Color = Color::grey8(0x55);
 
 struct ToolbarItem {
     icon: BezPath,

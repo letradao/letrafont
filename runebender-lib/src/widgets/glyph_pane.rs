@@ -60,46 +60,49 @@ fn build_widget() -> impl Widget<EditorState> {
     let glyph_font: FontDescriptor = FontDescriptor::new(FontFamily::MONOSPACE);
     Flex::column()
         .with_child(
+            GlyphPainter::new()
+                .color(theme::PRIMARY_TEXT_COLOR)
+                .draw_layout_frame(true)
+                .fix_height(400.0)
+                .padding((8.0, 8.0))
+                .lens(EditorState::detail_glyph),
+        )
+        .with_child(
             Flex::row()
                 .with_child(
                     EditableLabel::parse()
                         .with_font(glyph_font.clone())
                         .with_text_size(24.0)
                         .with_text_color(theme::SECONDARY_TEXT_COLOR)
-                        .with_text_alignment(druid::TextAlignment::End)
+                        .with_text_alignment(druid::TextAlignment::Center)
                         .lens(Sidebearings::left)
                         .controller(GlyphPane)
                         .lens(EditorState::sidebearings)
-                        .fix_width(40.0),
-                )
-                .with_child(
-                    GlyphPainter::new()
-                        .color(theme::PRIMARY_TEXT_COLOR)
-                        .draw_layout_frame(true)
-                        .fix_height(256.0)
-                        .padding((8.0, 8.0))
-                        .lens(EditorState::detail_glyph),
+                        .padding((4.0, 4.0))
+                        .fix_width(64.0),
                 )
                 .with_child(
                     EditableLabel::parse()
                         .with_font(glyph_font.clone())
                         .with_text_size(24.0)
                         .with_text_color(theme::SECONDARY_TEXT_COLOR)
-                        .with_text_alignment(druid::TextAlignment::Start)
+                        .with_text_alignment(druid::TextAlignment::Center)
+                        .lens(EditorState::detail_glyph.then(GlyphDetail::advance))
+                        .padding((4.0, 4.0))
+                        .fix_width(96.0),
+                )
+                .with_child(
+                    EditableLabel::parse()
+                        .with_font(glyph_font.clone())
+                        .with_text_size(24.0)
+                        .with_text_color(theme::SECONDARY_TEXT_COLOR)
+                        .with_text_alignment(druid::TextAlignment::Center)
                         .lens(Sidebearings::right)
                         .controller(GlyphPane)
                         .lens(EditorState::sidebearings)
-                        .fix_width(40.0),
-                ),
-        )
-        .with_child(
-            EditableLabel::parse()
-                .with_font(glyph_font.clone())
-                .with_text_size(24.0)
-                .with_text_color(theme::SECONDARY_TEXT_COLOR)
-                .with_text_alignment(druid::TextAlignment::Center)
-                .lens(EditorState::detail_glyph.then(GlyphDetail::advance))
-                .fix_width(64.0),
+                        .padding((4.0, 4.0))
+                        .fix_width(64.0),
+                )
         )
         .padding(8.0)
 }
