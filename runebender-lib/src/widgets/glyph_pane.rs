@@ -79,7 +79,7 @@ fn build_widget() -> impl Widget<EditorState> {
                         .controller(GlyphPane)
                         .lens(EditorState::sidebearings)
                         .padding((4.0, 4.0))
-                        .fix_width(64.0),
+                        .fix_width(72.0),
                 )
                 .with_child(
                     EditableLabel::parse()
@@ -89,7 +89,7 @@ fn build_widget() -> impl Widget<EditorState> {
                         .with_text_alignment(druid::TextAlignment::Center)
                         .lens(EditorState::detail_glyph.then(GlyphDetail::advance))
                         .padding((4.0, 4.0))
-                        .fix_width(96.0),
+                        .fix_width(72.0),
                 )
                 .with_child(
                     EditableLabel::parse()
@@ -101,7 +101,7 @@ fn build_widget() -> impl Widget<EditorState> {
                         .controller(GlyphPane)
                         .lens(EditorState::sidebearings)
                         .padding((4.0, 4.0))
-                        .fix_width(64.0),
+                        .fix_width(72.0),
                 )
         )
         .padding(8.0)
