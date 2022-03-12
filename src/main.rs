@@ -13,7 +13,7 @@ fn main() {
 
     let main_window = WindowDesc::new(make_ui())
         .title(LocalizedString::new("LetraFont"))
-        //.menu(menus::make_menu)
+        .menu(menus::make_menu)
         .window_size(Size::new(900.0, 800.0));
 
     AppLauncher::with_window(main_window)
