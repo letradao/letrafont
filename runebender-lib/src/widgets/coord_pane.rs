@@ -145,7 +145,7 @@ fn build_widget() -> impl Widget<CoordinateSelection> {
                         .with_text_size(24.0)
                         .with_text_color(theme::SECONDARY_TEXT_COLOR)
                         .lens(point_x_lens)
-                        .fix_width(64.0)
+                        .fix_width(80.0)
                         .padding((0.0, 0.0, 0.0, 8.0)),
                 ),
         )
@@ -164,7 +164,7 @@ fn build_widget() -> impl Widget<CoordinateSelection> {
                         .with_text_size(24.0)
                         .with_text_color(theme::SECONDARY_TEXT_COLOR)
                         .lens(point_y_lens)
-                        .fix_width(64.0),
+                        .fix_width(80.0),
                 ),
         )
         .lens(CoordinateSelection::quadrant_coord);
@@ -188,7 +188,7 @@ fn build_widget() -> impl Widget<CoordinateSelection> {
                             .with_text_size(24.0)
                             .with_text_color(theme::SECONDARY_TEXT_COLOR)
                             .lens(size_width_lens)
-                            .fix_width(64.0)
+                            .fix_width(80.0)
                             .padding((0.0, 0.0, 0.0, 8.0)),
                     ),
             )
@@ -208,7 +208,7 @@ fn build_widget() -> impl Widget<CoordinateSelection> {
                             .with_text_size(24.0)
                             .with_text_color(theme::SECONDARY_TEXT_COLOR)
                             .lens(size_height_lens)
-                            .fix_width(64.0),
+                            .fix_width(80.0),
                     ),
             )
             .lens(CoordinateSelection::quadrant_bbox),
