@@ -235,7 +235,7 @@ impl Workspace {
             id,
             PreviewSession {
                 text: "REGEN DEGEN REN GEN REG RR GG".to_string().into(),
-                font_size: 128.0,
+                font_size: DEFAULT_PREVIEW_FONT_SIZE,
             },
         );
         id

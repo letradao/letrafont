@@ -1,11 +1,13 @@
 //! A font editor.
 
 use druid::kurbo::Line;
-use druid::widget::{Button, Flex, Label, Painter, Scroll, WidgetExt};
+use druid::widget::{Flex, Label, Painter, Scroll, WidgetExt};
+//use druid::widget::{Button, Flex, Label, Painter, Scroll, WidgetExt};
 use druid::{AppLauncher, Env, LocalizedString, RenderContext, Size, Widget, WindowDesc};
 
 use runebender_lib::data::{AppState, Workspace};
-use runebender_lib::widgets::{self, GlyphGrid, ModalHost, Sidebar};
+use runebender_lib::widgets::{GlyphGrid, ModalHost, Sidebar};
+//use runebender_lib::widgets::{self, GlyphGrid, ModalHost, Sidebar};
 use runebender_lib::{menus, theme, Delegate};
 
 fn main() {
@@ -14,7 +16,7 @@ fn main() {
     let main_window = WindowDesc::new(make_ui())
         .title(LocalizedString::new("LetraFont"))
         .menu(menus::make_menu)
-        .window_size(Size::new(900.0, 800.0));
+        .window_size(Size::new(821.0, 512.0));
 
     AppLauncher::with_window(main_window)
         .delegate(Delegate::default())
@@ -35,10 +37,11 @@ fn make_ui() -> impl Widget<AppState> {
         ctx.stroke(line, &env.get(theme::SIDEBAR_EDGE_STROKE), 1.0);
     });
 
-    //let label = Label::new(|data: &Workspace, _: &Env| {
-    //    format!("{} {}", data.info.family_name, data.info.style_name)
-    //});
+    let _label = Label::new(|data: &Workspace, _: &Env| {
+        format!("{} {}", data.info.family_name, data.info.style_name)
+    });
 
+    // TODO: Style this button so it looks nice, but leave the code commented out until then.
     //let button = Button::new("(edit)").on_click(|ctx, _data, _env| {
     //    let cmd = ModalHost::make_modal_command(crate::widgets::font_info);
     //    ctx.submit_command(cmd);

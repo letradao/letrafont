@@ -9,7 +9,8 @@ use druid::{
 use druid::kurbo::Line;
 use druid::lens::LensExt;
 use druid::text::format::ParseFormatter;
-use druid::widget::{prelude::*, Flex, Label, Painter, TextBox, WidgetExt};
+use druid::widget::{prelude::*, Flex, Painter, TextBox, WidgetExt};
+//use druid::widget::{prelude::*, Flex, Label, Painter, TextBox, WidgetExt};
 use druid::{FontDescriptor, FontFamily};
 use norad::{GlyphName, Ufo};
 

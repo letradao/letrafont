@@ -1,6 +1,7 @@
 //! The toolbar widget
 
-use druid::kurbo::{Affine, BezPath, Line, Shape, Vec2};
+use druid::kurbo::{Affine, BezPath, Line, Shape};
+//use druid::kurbo::{Affine, BezPath, Line, Shape, Vec2};
 use druid::widget::prelude::*;
 use druid::widget::{Painter, WidgetExt};
 use druid::{Color, Data, HotKey, KeyEvent, Rect, SysMods, WidgetPod};
