@@ -141,7 +141,7 @@ fn build_widget() -> impl Widget<CoordinateSelection> {
                 )
                 .with_child(
                     EditableLabel::parse()
-                        .with_font(coord_font.clone())
+                        //.with_font(coord_font.clone())
                         .with_text_size(24.0)
                         .with_text_color(theme::SECONDARY_TEXT_COLOR)
                         .lens(point_x_lens)
@@ -160,7 +160,7 @@ fn build_widget() -> impl Widget<CoordinateSelection> {
                 )
                 .with_child(
                     EditableLabel::parse()
-                        .with_font(coord_font.clone())
+                        //.with_font(coord_font.clone())
                         .with_text_size(24.0)
                         .with_text_color(theme::SECONDARY_TEXT_COLOR)
                         .lens(point_y_lens)
@@ -184,7 +184,7 @@ fn build_widget() -> impl Widget<CoordinateSelection> {
                     .with_spacer(0.0)
                     .with_child(
                         EditableLabel::parse()
-                            .with_font(coord_font.clone())
+                            //.with_font(coord_font.clone())
                             .with_text_size(24.0)
                             .with_text_color(theme::SECONDARY_TEXT_COLOR)
                             .lens(size_width_lens)
@@ -204,7 +204,7 @@ fn build_widget() -> impl Widget<CoordinateSelection> {
                     .with_spacer(0.0)
                     .with_child(
                         EditableLabel::parse()
-                            .with_font(coord_font.clone())
+                            //.with_font(coord_font.clone())
                             .with_text_size(24.0)
                             .with_text_color(theme::SECONDARY_TEXT_COLOR)
                             .lens(size_height_lens)
