@@ -38,7 +38,9 @@ impl<'a, 'b> std::ops::Deref for DrawCtx<'a, 'b> {
 
 impl<'a, 'b> std::ops::DerefMut for DrawCtx<'a, 'b> {
     fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.ctx
+        //TODO: Trying to fix a Clippy warn. - Eli H
+        //&mut self.ctx
+        self.ctx
     }
 }
 
@@ -424,7 +426,9 @@ pub(crate) fn draw_session(
     font: &Workspace,
     is_preview: bool,
 ) {
-    let mut draw_ctx = DrawCtx::new(&mut ctx.render_ctx, env, space, visible_rect);
+    //TODO: I edited this to fix a clippy warn. Look into more if I have time. - Eli H
+    //let mut draw_ctx = DrawCtx::new(&mut ctx.render_ctx, env, space, visible_rect);
+    let mut draw_ctx = DrawCtx::new(ctx.render_ctx, env, space, visible_rect);
 
     if is_preview {
         draw_ctx.draw_filled(session, font);

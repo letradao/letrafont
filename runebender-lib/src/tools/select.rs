@@ -514,6 +514,7 @@ fn iter_handle_circles(session: &EditSession) -> impl Iterator<Item = (Quadrant,
     let handle_frame = bbox + SELECTION_BBOX_HANDLE_PADDING;
     Quadrant::all()
         .iter()
+        // TODO: This makes a clippy warn, but I can't figure out how to fix it at this time.
         .filter(move |q| {
             !(bbox.width() == 0. && q.modifies_x_axis())
                 && !(bbox.height() == 0. && q.modifies_y_axis())

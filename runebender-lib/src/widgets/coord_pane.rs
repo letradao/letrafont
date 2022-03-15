@@ -126,7 +126,7 @@ fn build_widget() -> impl Widget<CoordinateSelection> {
     );
 
     let coord_label_font: FontDescriptor = FontDescriptor::new(FontFamily::MONOSPACE);
-    let coord_font: FontDescriptor = FontDescriptor::new(FontFamily::MONOSPACE);
+    let _coord_font: FontDescriptor = FontDescriptor::new(FontFamily::MONOSPACE);
 
     let coord_editor = Flex::column()
         .with_child(
