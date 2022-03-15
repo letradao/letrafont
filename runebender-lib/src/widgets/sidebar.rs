@@ -86,7 +86,7 @@ impl Sidebar {
                     || SizedBox::empty().expand_width().boxed(),
                 )
                 .lens(Workspace::selected_glyph)
-                .background(Color::grey8(0xCC))
+                //.background(Color::grey8(0xCC))
                 .boxed(),
             ),
         }
