@@ -6,7 +6,8 @@ use druid::widget::{Flex, Label, Painter, Scroll, WidgetExt};
 use druid::{AppLauncher, Env, LocalizedString, RenderContext, Size, Widget, WindowDesc};
 
 use runebender_lib::data::{AppState, Workspace};
-use runebender_lib::widgets::{GlyphGrid, ModalHost, Sidebar};
+use runebender_lib::widgets::{GlyphGrid, ModalHost};
+//use runebender_lib::widgets::{GlyphGrid, ModalHost, Sidebar};
 //use runebender_lib::widgets::{self, GlyphGrid, ModalHost, Sidebar};
 use runebender_lib::{menus, theme, Delegate};
 
