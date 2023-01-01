@@ -57,7 +57,7 @@ impl<W: Widget<Sidebearings>> Controller<Sidebearings, W> for GlyphPane {
 }
 
 fn build_widget() -> impl Widget<EditorState> {
-    let _glyph_font: FontDescriptor = FontDescriptor::new(FontFamily::MONOSPACE);
+    let glyph_font: FontDescriptor = FontDescriptor::new(FontFamily::MONOSPACE);
     Flex::column()
         .with_child(
             GlyphPainter::new()
@@ -71,7 +71,7 @@ fn build_widget() -> impl Widget<EditorState> {
             Flex::row()
                 .with_child(
                     EditableLabel::parse()
-                        //.with_font(glyph_font.clone())
+                        .with_font(glyph_font.clone())
                         .with_text_size(24.0)
                         .with_text_color(theme::SECONDARY_TEXT_COLOR)
                         .with_text_alignment(druid::TextAlignment::Center)
@@ -83,7 +83,7 @@ fn build_widget() -> impl Widget<EditorState> {
                 )
                 .with_child(
                     EditableLabel::parse()
-                        //.with_font(glyph_font.clone())
+                        .with_font(glyph_font.clone())
                         .with_text_size(24.0)
                         .with_text_color(theme::SECONDARY_TEXT_COLOR)
                         .with_text_alignment(druid::TextAlignment::Center)
@@ -93,7 +93,7 @@ fn build_widget() -> impl Widget<EditorState> {
                 )
                 .with_child(
                     EditableLabel::parse()
-                        //.with_font(glyph_font.clone())
+                        .with_font(glyph_font.clone())
                         .with_text_size(24.0)
                         .with_text_color(theme::SECONDARY_TEXT_COLOR)
                         .with_text_alignment(druid::TextAlignment::Center)

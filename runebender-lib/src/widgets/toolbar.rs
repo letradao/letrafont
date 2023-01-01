@@ -6,7 +6,8 @@ use druid::widget::prelude::*;
 use druid::widget::{Painter, WidgetExt};
 use druid::{Color, Data, HotKey, KeyEvent, Rect, SysMods, WidgetPod};
 
-use crate::consts;
+//use crate::{consts, bez_cache};
+use crate::{consts};
 use crate::tools::ToolId;
 
 const TOOLBAR_ITEM_SIZE: Size = Size::new(48.0, 48.0);
@@ -16,7 +17,7 @@ const TOOLBAR_BORDER_STROKE_WIDTH: f64 = 1.5;
 const TOOLBAR_ITEM_STROKE_WIDTH: f64 = 1.25;
 // TODO: move these to theme
 const TOOLBAR_BG_DEFAULT: Color = Color::grey8(0x00);
-const TOOLBAR_BG_SELECTED: Color = Color::grey8(0x55);
+const TOOLBAR_BG_SELECTED: Color = Color::rgb8(0xff, 0xaa, 0x11);
 
 struct ToolbarItem {
     icon: BezPath,
@@ -275,19 +276,37 @@ fn constrain_path(mut path: BezPath) -> BezPath {
 fn select_path() -> BezPath {
     let mut bez = BezPath::new();
 
-    bez.move_to((110.0, 500.0));
-    bez.line_to((110.0, 380.0));
-    bez.line_to((2.0, 410.0));
-    bez.line_to((0.0, 410.0));
-    bez.line_to((159.0, 0.0));
-    bez.line_to((161.0, 0.0));
-    bez.line_to((320.0, 410.0));
-    bez.line_to((318.0, 410.0));
-    bez.line_to((210.0, 380.0));
-    bez.line_to((210.0, 500.0));
-    bez.line_to((110.0, 500.0));
+    bez.move_to((144.0, 500.0));
+    bez.line_to((96.0, 349.0));
+    bez.line_to((87.0, 345.0));
+    bez.line_to((10.0, 408.0));
+    bez.line_to((0.0, 406.0));
+    bez.line_to((5.0, 5.0));
+    bez.line_to((17.0, 0.0));
+    bez.line_to((266.0, 286.0));
+    bez.line_to((263.0, 296.0));
+    bez.line_to((165.0, 313.0));
+    bez.line_to((162.0, 321.0));
+    bez.line_to((227.0, 456.0));
+    bez.line_to((221.0, 465.0));
+    bez.line_to((157.0, 500.0));
+    bez.line_to((144.0, 500.0));
     bez.close_path();
-    bez
+    bez    
+
+//    bez.move_to((110.0, 500.0));
+//    bez.line_to((110.0, 380.0));
+//    bez.line_to((2.0, 410.0));
+//    bez.line_to((0.0, 410.0));
+//    bez.line_to((159.0, 0.0));
+//    bez.line_to((161.0, 0.0));
+//    bez.line_to((320.0, 410.0));
+//    bez.line_to((318.0, 410.0));
+//    bez.line_to((210.0, 380.0));
+//    bez.line_to((210.0, 500.0));
+//    bez.line_to((110.0, 500.0));
+//    bez.close_path();
+//    bez
 }
 
 fn pen_path() -> BezPath {
