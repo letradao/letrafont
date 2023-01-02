@@ -53,8 +53,15 @@ impl Toolbar {
                 };
                 let frame = ctx.size().to_rect();
                 ctx.fill(frame, &color);
-                ctx.fill(&icon, &Color::BLACK);
-                ctx.stroke(&icon, &Color::WHITE, TOOLBAR_ITEM_STROKE_WIDTH);
+                if *is_selected {
+                    ctx.fill(&icon, &Color::WHITE);
+                    ctx.stroke(&icon, &Color::BLACK, TOOLBAR_ITEM_STROKE_WIDTH);
+                } else {
+                    ctx.fill(&icon, &Color::BLACK);
+                    ctx.stroke(&icon, &Color::WHITE, TOOLBAR_ITEM_STROKE_WIDTH);
+                };
+                //ctx.fill(&icon, &Color::BLACK);
+                //ctx.stroke(&icon, &Color::WHITE, TOOLBAR_ITEM_STROKE_WIDTH);
             });
 
             let widg = widg.on_click(|ctx, selected, _| {

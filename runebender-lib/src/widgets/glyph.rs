@@ -89,7 +89,7 @@ impl Widget<GlyphDetail> for GlyphPainter {
 
         if self.draw_frame {
             let frame_rect = (glyph_bounds.size() * scale).to_rect();
-            ctx.stroke(frame_rect, &glyph_color, 0.5);
+            ctx.stroke(frame_rect, &glyph_color, 1.5);
         }
         ctx.fill(affine * &*data.outline, &glyph_color);
     }

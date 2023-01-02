@@ -97,7 +97,7 @@ impl Widget<Quadrant> for CoordRepresentationPicker {
         for quadrant in Quadrant::all() {
             let pt = quadrant.point_in_rect(rect);
             let color = if data == quadrant {
-                env.get(theme::OFF_CURVE_HANDLE_COLOR)
+                env.get(theme::SELECTED_POINT_INNER_COLOR)
             } else {
                 env.get(theme::OFF_CURVE_POINT_INNER_COLOR)
             };
