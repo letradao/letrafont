@@ -139,10 +139,10 @@ impl Widget<GridGlyph> for GridInner {
         let bb = path.bounding_box();
         let geom = ctx.size().to_rect();
         let scale = geom.height() as f64 / data.upm;
-        let scale = scale * 0.75; // some margins around glyphs
+        let scale = scale * 0.55; // some margins around glyphs
         let scaled_width = bb.width() * scale as f64;
         let l_pad = ((geom.width() as f64 - scaled_width) / 2.).round();
-        let baseline = (geom.height() * 0.29) as f64;
+        let baseline = (geom.height() * 0.37) as f64;
         let affine = Affine::new([
             scale as f64,
             0.0,
