@@ -234,6 +234,12 @@ impl Default for Toolbar {
             hotkey: HotKey::new(SysMods::Shift, "P"),
         };
 
+        let metaball = ToolbarItem {
+            name: "MetaBall",
+            icon: constrain_path(metaball_path()),
+            hotkey: HotKey::new(SysMods::Shift, "M"),
+        };
+
         let preview = ToolbarItem {
             name: "Preview",
             icon: constrain_path(preview_path()),
@@ -265,7 +271,7 @@ impl Default for Toolbar {
         };
 
         Toolbar::new(vec![
-            select, pen, hyperpen, knife, preview, measure, rectangle, ellipse,
+            select, pen, hyperpen, metaball, knife, preview, measure, rectangle, ellipse,
         ])
     }
 }
@@ -370,6 +376,45 @@ fn hyperpen_path() -> BezPath {
     bez.curve_to((153.0, 125.0), (117.0, 149.0), (117.0, 207.0));
     bez.curve_to((117.0, 246.0), (133.0, 266.0), (160.0, 266.0));
     bez.curve_to((188.0, 266.0), (194.0, 252.0), (194.0, 237.0));
+    bez.close_path();
+    bez
+}
+
+fn metaball_path() -> BezPath {
+    let mut bez = BezPath::new();
+    bez.move_to((333.0, 520.0));
+    bez.curve_to((409.0, 520.0), (468.0, 462.0), (468.0, 385.0));
+    bez.curve_to((468.0, 310.0), (416.0, 258.0), (344.0, 247.0));
+    bez.curve_to((296.0, 240.0), (270.0, 202.0), (270.0, 128.0));
+    bez.curve_to((270.0, 64.0), (217.0, 0.0), (137.0, 0.0));
+    bez.curve_to((59.0, 0.0), (0.0, 58.0), (0.0, 128.0));
+    bez.curve_to((0.0, 206.0), (48.0, 252.0), (98.0, 266.0));
+    bez.curve_to((166.0, 285.0), (187.0, 299.0), (198.0, 401.0));
+    bez.curve_to((203.0, 447.0), (240.0, 520.0), (333.0, 520.0));
+    bez.close_path();
+    bez.move_to((333.0, 453.0));
+    bez.curve_to((296.0, 453.0), (265.0, 422.0), (265.0, 385.0));
+    bez.curve_to((265.0, 347.0), (296.0, 317.0), (333.0, 317.0));
+    bez.curve_to((370.0, 317.0), (401.0, 347.0), (401.0, 385.0));
+    bez.curve_to((401.0, 422.0), (370.0, 453.0), (333.0, 453.0));
+    bez.close_path();
+    bez.move_to((333.0, 401.0));
+    bez.curve_to((342.0, 401.0), (349.0, 393.0), (349.0, 385.0));
+    bez.curve_to((349.0, 376.0), (342.0, 369.0), (333.0, 369.0));
+    bez.curve_to((324.0, 369.0), (317.0, 376.0), (317.0, 385.0));
+    bez.curve_to((317.0, 393.0), (324.0, 401.0), (333.0, 401.0));
+    bez.close_path();
+    bez.move_to((137.0, 144.0));
+    bez.curve_to((146.0, 144.0), (153.0, 136.0), (153.0, 128.0));
+    bez.curve_to((153.0, 119.0), (146.0, 112.0), (137.0, 112.0));
+    bez.curve_to((128.0, 112.0), (121.0, 119.0), (121.0, 128.0));
+    bez.curve_to((121.0, 136.0), (128.0, 144.0), (137.0, 144.0));
+    bez.close_path();
+    bez.move_to((137.0, 196.0));
+    bez.curve_to((100.0, 196.0), (69.0, 165.0), (69.0, 128.0));
+    bez.curve_to((69.0, 90.0), (100.0, 60.0), (137.0, 60.0));
+    bez.curve_to((174.0, 60.0), (205.0, 90.0), (205.0, 128.0));
+    bez.curve_to((205.0, 165.0), (174.0, 196.0), (137.0, 196.0));
     bez.close_path();
     bez
 }
