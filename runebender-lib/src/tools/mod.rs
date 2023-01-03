@@ -6,6 +6,7 @@ mod measure;
 mod pen;
 mod preview;
 mod rectangle;
+mod metaball;
 mod select;
 
 pub use ellipse::Ellipse;
@@ -14,6 +15,7 @@ pub use measure::Measure;
 pub use pen::Pen;
 pub use preview::Preview;
 pub use rectangle::Rectangle;
+pub use metaball::Metaball;
 pub use select::Select;
 
 use crate::edit_session::EditSession;
@@ -143,6 +145,7 @@ pub fn tool_for_id(id: ToolId) -> Option<Box<dyn Tool>> {
         "Preview" => Some(Box::new(Preview::default())),
         "Pen" => Some(Box::new(Pen::cubic())),
         "HyperPen" => Some(Box::new(Pen::hyper())),
+        "Metaball" => Some(Box::new(Metaball::default())),
         "Select" => Some(Box::new(Select::default())),
         "Rectangle" => Some(Box::new(Rectangle::default())),
         "Ellipse" => Some(Box::new(Ellipse::default())),

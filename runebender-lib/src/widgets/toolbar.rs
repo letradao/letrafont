@@ -235,7 +235,7 @@ impl Default for Toolbar {
         };
 
         let metaball = ToolbarItem {
-            name: "MetaBall",
+            name: "Metaball",
             icon: constrain_path(metaball_path()),
             hotkey: HotKey::new(SysMods::Shift, "M"),
         };
